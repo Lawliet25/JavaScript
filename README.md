@@ -1,4 +1,4 @@
-** JavaScript
+## JavaScript
 *** Esto es una prueba. 
 
 ---
