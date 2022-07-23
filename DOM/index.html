@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primer ejemplo DOM con JS </title>
+    <style>
+        .azul{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="cabecera">Ejemplo DOM con JS</h1>
+    <p id="parrafo">Saludos.</p>
+    <p class="azul">Este párrafo es de prueba</p>
+    <p class=" azul">Este párrafo también es de prueba</p>
+
+    <p>Este párrafo tiene una clase</p>
+    <p>Este párrafo también tiene una clase</p>
+    <script>
+
+        //Uso de getElementbyID
+        let cabecera = document.getElementById('cabecera');
+        console.log(`El valor de la cabecera es: ${cabecera.innerHTML}`);
+        let parrafo = document.getElementById('parrafo');
+        console.log(`El valor del párrafo es: ${parrafo.innerHTML}`);
+
+        //Uso de getElementbyTagname
+        let numParrafos = document.getElementsByTagName('p');
+        console.log(`El número de párrafos es: ${numParrafos.length}`);
+        for (let i = 0; i <numParrafos.length; i++) {
+            console.log('Num: ' + i + '. '+numParrafos[i].innerHTML);
+    
+        }
+        //Uso de getElementbyClass
+        let parraClases = document.getElementsByClassName('azul');
+        for (const parraClase of parraClases) {
+            console.log(parraClase.innerHTML);
+        }
+
+        //Modificando valores
+        cabecera.innerHTML= 'Nueva cabecera';
+        parrafo.innerHTML ='Párrafo modificado';
+    </script>
+</body>
+</html>
