@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambios a partir de botón JS</title>
+</head>
+<body>
+    <style>
+        img{
+            width: 500px;
+        }
+    </style>
+    <h2 id="titulo1">Este es un título genérico que cambiará de color.</h2>
+    <h2 id="titulo2"></h2>
+    <br>
+    <img id="imagen1" src="https://soyhorizonte.com/wp-content/uploads/2020/10/Javascript-by-SoyHorizonte.jpg" alt="">
+    <img id= "imagen2" src="" alt="" style="width:250px;"><br>
+    <button onclick="mostrar()">Mostrar cambios</button>
+
+    <script>
+        function mostrar(){
+            document.getElementById('titulo1').style.color = 'red';
+            document.getElementById('titulo2').innerHTML='Este título apareció por un botón';
+            document.getElementById('imagen2').src = 'https://cdn-icons-png.flaticon.com/512/174/174854.png';
+        }
+    </script>
+</body>
+</html>

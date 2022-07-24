@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario con JS</title>
+</head>
+<body>
+    <form id="formulario" action="">
+
+        <label for="">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Digite su nombre">
+        <label for="">Apellido</label>
+        <input type="text" id="apellido" name="nombre" placeholder="Digite su apellido">
+
+    </form>
+    <button onclick="mostrarDatos()">Mostrar</button>
+    <div id="vista">
+    </div>
+
+    <script>
+        function mostrarDatos(){
+           let formulario = document.forms['formulario'];
+           let nombre = formulario['nombre'].value;
+           let apellido = formulario['apellido'].value;
+           let texto = nombre + '<br>' + apellido;
+           
+           //for (const elemento of formulario) {
+            //texto += elemento.value + '<br>';
+           //}
+
+           document.getElementById('vista').innerHTML = texto;
+        }
+    </script>
+</body>
+</html>
