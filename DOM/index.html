@@ -11,14 +11,22 @@
         }
     </style>
 </head>
-<body>
+<body onload="recarga()">
+    <div id="cookie">
+
+    </div>
     <h1 id="cabecera">Ejemplo DOM con JS</h1>
     <p id="parrafo">Saludos.</p>
     <p class="azul">Este párrafo es de prueba</p>
     <p class=" azul">Este párrafo también es de prueba</p>
+    
 
     <p>Este párrafo tiene una clase</p>
     <p>Este párrafo también tiene una clase</p>
+    <h2 id="titulo">Haz clic aquí para ver la magia</h2>
+    <div id="pizarra">
+        Observa la magia: 
+    </div>
     <script>
 
         //Uso de getElementbyID
@@ -43,6 +51,25 @@
         //Modificando valores
         cabecera.innerHTML= 'Nueva cabecera';
         parrafo.innerHTML ='Párrafo modificado';
+
+        //Usando evento onclick
+        document.getElementById('titulo').onclick=cambiarTexto;
+
+        function cambiarTexto(){
+            document.getElementById('pizarra').innerHTML = ' MAGIA';
+        }
+        //Usando evento onload
+        alert('Ingresando al index del sitio.');
+        let cookie = '';
+
+        if (navigator.cookieEnabled) {
+            cookie = 'Cookies habilitadas';
+        } else {
+            cookie = 'Cookies inhabilitadas';
+        }
+
+        document.getElementById('cookie').innerHTML = cookie;
+
     </script>
 </body>
 </html>

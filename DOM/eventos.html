@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos con JS</title>
+</head>
+<body>
+    <style>
+        img{
+            width: 500px;
+        }
+    </style>
+
+    <h2>Evento onchage</h2>
+
+    <label for="">Nombre: </label>
+    <input type="text" id="nombre" onchange="mayuscula()">
+    <br><br>
+    <div id="pizarra">
+    </div>
+    
+    <h2>Eventos onmouseover y onmouseout</h2>
+    <h4>Pasa el mouse sobre la imagen para ver la magia</h4>
+    <img src="https://soyhorizonte.com/wp-content/uploads/2020/10/Javascript-by-SoyHorizonte.jpg" id="imagen" onmouseover="magia()" onmouseout="returnMagia()" alt="">
+    <br><br>
+    <h2>Eventos onfocus y onblur</h2>
+    <label for="">Nombre:</label><input type="text" onfocus="cambiar(this)" onblur="regresar(this)">
+    <label for="">Apellido</label><input type="text" onfocus="cambiar(this)" onblur="regresar(this)">
+    <label for="">Edad</label><input type="number" onfocus="cambiar(this)" onblur="regresar(this)">
+
+    <br><br>
+    <h2>Delegación d eventos con AddEventListener</h2>
+    <form action="" id="formulario">
+    <label for="">Nombre:</label><input type="text" id="nombre">
+    <label for="">Apellido</label><input type="text" id="apellido">
+    </form>
+
+    <script>
+        function mayuscula(){
+            let nombre = document.getElementById('nombre').value;
+            document.getElementById('pizarra').innerHTML = nombre.toUpperCase();
+        }
+
+        function magia(){
+         document.getElementById('imagen').src='https://play-lh.googleusercontent.com/uqGrvCA7700VYfvgBaGBcf2uaR9UomZkuaomvuxGO2pFSSQqJMlErYkXztpO7dBPrWng';
+        }
+        function returnMagia(){
+            let imagen = document.getElementById('imagen').src='https://soyhorizonte.com/wp-content/uploads/2020/10/Javascript-by-SoyHorizonte.jpg';
+            
+        }
+        function cambiar(elementoInput){
+            elementoInput.style.background = 'yellow';
+        }
+        function regresar(elementoInput){
+            elementoInput.style.background = 'white';
+        }
+
+        let formu = document.getElementById('formulario');
+        formu.addEventListener('focus', (evento)=>{
+            evento.target.style.background='pink'
+        },true);
+        formu.addEventListener('blur', (evento)=>{
+            evento.target.style.background='white'
+        },true);
+    </script>
+</body>
+</html>
