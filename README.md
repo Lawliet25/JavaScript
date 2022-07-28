@@ -12,3 +12,4 @@ Finalizando con introducción al framework Angular.
 - Arrays.
 - POO (clases y objetos).
 - Funciones (Callback, flecha, etc.)
+- Eventos (onclick, onload, etc.)
