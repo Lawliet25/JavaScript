@@ -17,7 +17,7 @@ else if(op=='Suma'){
     document.getElementById('exito').innerHTML = `Debe ingresar 2 números.`;
     }
     else{
-        resultado = (parseFloat(num1) + parseFloat(num2),2).toFixed(2) ;
+        resultado = (parseFloat(num1) + parseFloat(num2)).toFixed(2) ;
         document.getElementById('exito').className = 'alert alert-primary';
         document.getElementById('exito').innerHTML = `El resultado de la suma es: ${resultado}`;
     }

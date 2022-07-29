@@ -1,0 +1,15 @@
+table{
+    margin-top: 50px;
+    text-align: center;
+}
+header{
+    font-family: 'Lucida Sans';
+    font-size: 25px;
+    margin-top: 50px;
+    text-align: center;
+    text-decoration:overline;
+}
+form{
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
